@@ -10,10 +10,9 @@ This experiment investigates how visibility of social status influences behavior
 Players first participate without SES information, and then repeat the games with SES information shown.
 
 ## 🧪 Experimental Structure
-- Games are played in **pairs**, with random matching each round.
+- Games are played in **pairs**, with random matching.
 - Each block consists of a full cycle through all three games.
 - Players complete two blocks: one **blind** to SES, one with **SES visible**.
-- A Google Form survey is used pre-experiment to assign SES types.
 
 ## 📁 Repo Contents
 - `ses_behavior/` — main oTree app with game logic

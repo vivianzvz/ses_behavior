@@ -109,7 +109,7 @@ class Player(BasePlayer):
     gov_assistance = models.StringField(
         choices=["SNAP/EBT","Medicaid","Housing Assistance","Unemployment Benefits","None"],
         widget=widgets.RadioSelect,
-        label="Do you receive any government assistance that's listed below (excluding financial aid)?"
+        label="Do you receive any government assistance that's listed below (excluding financial aid)? Choose one."
     )
 
     # Part 3: childhood SES
@@ -151,6 +151,7 @@ class Player(BasePlayer):
 
 # INTRODUCTION PAGE
 class SESIntro(Page):
+    timeout_seconds = 100
     @staticmethod
     def vars_for_template(player):
         return {
@@ -162,6 +163,7 @@ class SESIntro(Page):
 # PAGES
 
 class SESPage1(Page):
+    timeout_seconds = 100
     form_model = 'player'
     # Include each BooleanField’s name explicitly:
     form_fields = [
@@ -185,6 +187,7 @@ class SESPage1(Page):
         }
 
 class SESPage2(Page):
+    timeout_seconds = 100
     form_model = 'player'
     form_fields = [
         'full_time_student','took_econ',
@@ -199,6 +202,7 @@ class SESPage2(Page):
         }
 
 class SESPage3(Page):
+    timeout_seconds = 100
     form_model = 'player'
     form_fields = [
         'childhood_zip','childhood_income','childhood_assistance','childhood_home_ownership'

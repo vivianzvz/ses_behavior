@@ -53,6 +53,7 @@ def set_payoffs(group: Group):
 
 # PAGES
 class Introduction(Page):
+    timeout_seconds = 100
     @staticmethod
     def vars_for_template(player):
         return {
@@ -62,6 +63,7 @@ class Introduction(Page):
 
 
 class Send(Page):
+    timeout_seconds = 100
     """This page is only for P1
     P1 sends amount (all, some, or none) to P2
     This amount is tripled by experimenter,
@@ -82,6 +84,7 @@ class Send(Page):
         }
 
 class SendBackWaitPage(WaitPage):
+    timeout_seconds = 100
     @staticmethod
     def vars_for_template(player):
         return {
@@ -91,6 +94,7 @@ class SendBackWaitPage(WaitPage):
 
 
 class SendBack(Page):
+    timeout_seconds = 100
     """This page is only for P2
     P2 sends back some amount (of the tripled amount received) to P1"""
     form_model = 'group'
@@ -109,6 +113,7 @@ class SendBack(Page):
         }
 
 class ResultsWaitPage(WaitPage):
+    timeout_seconds = 100
     after_all_players_arrive = set_payoffs
 
     @staticmethod
@@ -119,6 +124,7 @@ class ResultsWaitPage(WaitPage):
         }
 
 class Results(Page):
+    timeout_seconds = 100
     @staticmethod
     def vars_for_template(player):
         return {

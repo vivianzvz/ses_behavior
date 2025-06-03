@@ -16,6 +16,7 @@ class Player(BasePlayer):
     offer = models.CurrencyField(min=0, max=C.ENDOWMENT)
 
 class Offer(Page):
+    timeout_seconds = 100
     form_model = 'player'
     form_fields = ['offer']
 

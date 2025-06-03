@@ -66,6 +66,7 @@ class Introduction(Page):
         }
 
 class Decision(Page):
+    timeout_seconds = 100
     form_model = 'player'
     form_fields = ['cooperate']
     @staticmethod
@@ -76,6 +77,7 @@ class Decision(Page):
         }
 
 class ResultsWaitPage(WaitPage):
+    timeout_seconds = 100
     after_all_players_arrive = set_payoffs
     @staticmethod
     def vars_for_template(player: Player):
@@ -85,6 +87,7 @@ class ResultsWaitPage(WaitPage):
         }
 
 class Results(Page):
+    timeout_seconds = 100
     @staticmethod
     def vars_for_template(player: Player):
         opponent = other_player(player)

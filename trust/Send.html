@@ -1,0 +1,16 @@
+{% block content %}
+  {{ include_sibling 'Progress.html' }}
+
+  <h2>Your Choice</h2>
+    <p>
+    You are Participant A. Now you have {{C.ENDOWMENT}}. How much will you send to participant B?
+    </p>
+
+    {{ formfields }}
+    <p>
+    {{ next_button }}
+    </p>
+
+    {{ include_sibling 'instructions.html' }}
+
+{{ endblock }}

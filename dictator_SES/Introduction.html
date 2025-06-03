@@ -1,0 +1,7 @@
+{% block content %}
+  {{ include_sibling 'Progress.html' }}
+
+  <h2>Introduction</h2>
+    {{ include_sibling 'instructions.html' }}
+    {{ next_button }}
+{{ endblock }}

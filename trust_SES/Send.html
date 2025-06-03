@@ -1,0 +1,19 @@
+{% block content %}
+  {{ include_sibling 'Progress.html' }}
+
+  <h2>Your Choice</h2>
+  <div class="alert alert-info">
+    <strong>Your Peer's Status:</strong><br>
+    Personal income: {{ partner_personal_income }}<br>
+    Family income:  {{ partner_family_income }}<br>
+    Government assistance received: {{ partner_gov_assistance }}<br>
+    Wealth rank on a 1–10 ladder (1 = poorest, 10 = wealthiest): {{ partner_ladder_self }}<br>
+  </div>
+
+  <p>You are Participant A with {{ C.ENDOWMENT }}. How much will you send?</p>
+  {{ formfields }}
+  {{ next_button }}
+
+  {{ include_sibling 'instructions.html' }}
+
+{{ endblock }}

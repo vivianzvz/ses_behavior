@@ -1,0 +1,66 @@
+{% block content %}
+  {{ include_sibling 'Progress.html' }}
+  <h3>Questionnaire Page 1 of 3</h3>
+  <p>Answer the questions below:</p>
+
+  <div class="mb-3 _formfield">
+    {{ formfield 'age' }}
+  </div>
+
+  <div class="mb-3 _formfield">
+    <p>Which of the following best describe your ethnicity? (Select all that apply)</p>
+
+    <label>
+      <input type="checkbox" name="hispanic_latino_spanish_origin" value="True">
+      Hispanic/Latino/Spanish origin
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="white" value="True">
+      White
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="black_or_african_american" value="True">
+      Black or African American
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="asian" value="True">
+      Asian
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="native_american_alaska_native" value="True">
+      Native American/Alaska Native
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="native_hawaiian_pacific_islander" value="True">
+      Native Hawaiian/Pacific Islander
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="middle_eastern_north_african" value="True">
+      Middle Eastern/North African
+    </label><br>
+
+    <label>
+      <input type="checkbox" name="other_ethnicity" value="True">
+      Other
+    </label><br>
+  </div>
+
+  <div class="mb-3 _formfield">
+    {{ formfield 'gender' }}
+  </div>
+
+  <div class="mb-3 _formfield">
+    {{ formfield 'college_year' }}
+  </div>
+
+  <p>
+    {{ next_button }}
+  </p>
+
+{% endblock %}

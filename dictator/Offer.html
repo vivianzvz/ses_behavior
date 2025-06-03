@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+  {{ include_sibling 'Progress.html' }}
+
+  <h2>Your Decision</h2>
+
+  <p>
+    You are <strong>Participant 1</strong>. Please decide how much of the {{ C.ENDOWMENT }} points you will send.
+  </p>
+
+  {{ formfields }}
+  {{ next_button }}
+
+  {{ include_sibling 'instructions.html' }}
+{% endblock %}

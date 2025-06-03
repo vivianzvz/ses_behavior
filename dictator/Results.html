@@ -1,0 +1,17 @@
+{% block content %}
+  {{ include_sibling 'Progress.html' }}
+
+  <h2>Results</h2>
+    <p>
+
+        {{ if player.id_in_group == 1 }}
+            You decided to send <strong>{{ offer }}</strong> to Participant 2.
+        {{ else }}
+            Participant 1 decided to send <strong>{{ offer }}</strong>, so
+            you got <strong>{{ group.sent }}</strong>.
+        {{ endif }}
+
+        {{ next_button }}
+    </p>
+    {{ include_sibling 'instructions.html' }}
+{{ endblock }}

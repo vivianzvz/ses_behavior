@@ -1,0 +1,41 @@
+{# Progress.html #}
+<div class="my-2" style="position: relative;">
+  <!--
+    This is the “empty” progress container.  The inner .progress-bar may have
+    width="0%" when progress_percent is 0, but the label below is absolutely
+    positioned so it remains visible.
+  -->
+  <div class="progress" style="height: 1.5rem;">
+    <div
+      class="progress-bar bg-warning"
+      role="progressbar"
+      style="width: {{ progress_percent }}%;"
+      aria-valuenow="{{ progress_percent }}"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    ></div>
+  </div>
+
+  <!--
+    This element sits on top of the progress‐bar.  It spans the full width
+    and centers the text so that “Task X – Round Y” is always visible,
+    even when the blue bar behind it has zero width.
+  -->
+  <div
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      font-weight: 600;
+      color: black;
+    "
+  >
+    {{ progress_label }}
+  </div>
+</div>

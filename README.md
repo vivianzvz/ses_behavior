@@ -1,4 +1,4 @@
-# SES and Behavior Game Suite (oTree)
+# SES and Behavior Game (oTree)
 
 This repository contains the oTree implementation of a multi-game experimental suite designed to explore the effects of **social status (SES)** on prosocial behavior, developed for ECON 165 at UC Santa Cruz. The project idea originated from Kayson Tang, Victor Shi, and Chidalu Maduewesi.
 This experiment investigates how visibility of social status influences behavior in three classic economic games:
